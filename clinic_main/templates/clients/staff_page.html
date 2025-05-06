@@ -1,0 +1,27 @@
+{% extends "clients/base.html" %}
+
+{% block title %}Панель персонала{% endblock %}
+
+{% block content %}
+<h1>Панель персонала</h1>
+<table class="table mt-4">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Имя пользователя</th>
+    <th>Телефон</th>
+    <th>Дата регистрации</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for user in users %}
+  <tr>
+    <td>{{ user.id }}</td>
+    <td>{{ user.username }}</td>
+    <td>{{ user.phone }}</td>
+    <td>{{ user.date_joined|date:"d.m.Y" }}</td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

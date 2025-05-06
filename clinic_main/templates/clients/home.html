@@ -1,0 +1,10 @@
+{% extends "clients/base.html" %}
+
+{% block content %}
+<h1>Добро пожаловать!</h1>
+{% if not user.is_authenticated %}
+<div class="alert alert-info mt-4">
+  <p>Пожалуйста, <a href="{% url 'login' %}" class="alert-link">войдите</a> или <a href="{% url 'register' %}" class="alert-link">зарегистрируйтесь</a></p>
+</div>
+{% endif %}
+{% endblock %}

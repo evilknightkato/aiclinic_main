@@ -1,0 +1,16 @@
+{% extends "clients/base.html" %}
+
+{% block title %}Личный кабинет клиента{% endblock %}
+
+{% block content %}
+<h1>Ваш личный кабинет</h1>
+<div class="card mt-4">
+  <div class="card-body">
+    <h5 class="card-title">Ваши данные</h5>
+    <p class="card-text">
+      Имя пользователя: {{ user.username }}<br>
+      Телефон: {{ user.phone }}
+    </p>
+  </div>
+</div>
+{% endblock %}
